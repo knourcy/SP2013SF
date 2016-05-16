@@ -80,7 +80,7 @@
   },
   "resources": [
     {
-      "apiVersion": "2015-05-01",
+      "apiVersion": "2015-06-15",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[parameters('sqlwVMName')]",
       "location": "[resourceGroup().location]",
@@ -142,7 +142,7 @@
         {
           "type": "Microsoft.Compute/virtualMachines/extensions",
           "name": "[concat(parameters('sqlwVMName'),'/CreateFileShareWitness')]",
-          "apiVersion": "2015-05-01",
+          "apiVersion": "2015-06-15",
           "location": "[resourceGroup().location]",
           "dependsOn": [
             "[concat('Microsoft.Compute/virtualMachines/', parameters('sqlwVMName'))]"
@@ -166,7 +166,7 @@
       ]
     },
     {
-      "apiVersion": "2015-05-01",
+      "apiVersion": "2015-06-15",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[concat(parameters('sqlVMName'), copyindex())]",
       "location": "[resourceGroup().location]",
@@ -242,7 +242,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(parameters('sqlVMName'), '0/SQLAOSetup')]",
-      "apiVersion": "2015-05-01",
+      "apiVersion": "2015-06-15",
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Compute/virtualMachines/', parameters('sqlVMName'),'0')]"
@@ -265,7 +265,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(parameters('sqlVMName'), '1/CreateCluster')]",
-      "apiVersion": "2015-05-01",
+      "apiVersion": "2015-06-15",
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Compute/virtualMachines/', parameters('sqlVMName'),'1')]"

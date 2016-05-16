@@ -76,7 +76,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(parameters('sqlwVMName'),'/CreateFileShareWitness')]",
-      "apiVersion": "2015-05-01",
+      "apiVersion": "2015-06-15",
       "location": "[resourceGroup().location]",
       "properties": {
         "publisher": "Microsoft.Powershell",
@@ -106,7 +106,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(parameters('sqlVMName'),'0/SQLAOSetup')]",
-      "apiVersion": "2015-05-01",
+      "apiVersion": "2015-06-15",
       "location": "[resourceGroup().location]",
       "properties": {
         "publisher": "Microsoft.Powershell",
@@ -146,7 +146,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(parameters('sqlVMName'),'1/CreateCluster')]",
-      "apiVersion": "2015-05-01",
+      "apiVersion": "2015-06-15",
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Compute/virtualMachines/',parameters('sqlVMName'),'0/extensions/SQLAOSetup')]",
