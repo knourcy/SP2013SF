@@ -76,7 +76,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(parameters('spappVMName'),'0/ConfigureSPAppServer')]",
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01",
       "location": "[resourceGroup().location]",
       "properties": {
         "publisher": "Microsoft.Powershell",
@@ -133,7 +133,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(parameters('spappVMName'),'1/ConfigureSPAppServer')]",
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01",
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Compute/virtualMachines/', parameters('spappVMName'),'0','/extensions/ConfigureSPAppServer')]"
@@ -193,7 +193,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(parameters('spwebVMName'),'0/ConfigureSPWebServer')]",
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01",
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Compute/virtualMachines/', parameters('spappVMName'),'0/extensions/ConfigureSPAppServer')]"
@@ -253,7 +253,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(parameters('spwebVMName'),'1/ConfigureSPWebServer')]",
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01",
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Compute/virtualMachines/', parameters('spwebVMName'),'0/extensions/ConfigureSPWebServer')]"

@@ -53,7 +53,7 @@
   },
   "resources": [
     {
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[concat(parameters('spappVMName'), copyindex())]",
       "location": "[resourceGroup().location]",
@@ -119,7 +119,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(parameters('spappVMName'), copyindex(),'/ConfigureSPAppServer')]",
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01",
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Compute/virtualMachines/', parameters('spappVMName'),copyindex())]"
@@ -145,7 +145,7 @@
       }
     },
     {
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[concat(parameters('spwebVMName'), copyindex())]",
       "location": "[resourceGroup().location]",
@@ -211,7 +211,7 @@
     {
       "type": "Microsoft.Compute/virtualMachines/extensions",
       "name": "[concat(parameters('spwebVMName'), copyindex(),'/ConfigureSPWebServer')]",
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01",
       "location": "[resourceGroup().location]",
       "dependsOn": [
         "[concat('Microsoft.Compute/virtualMachines/', parameters('spwebVMName'),copyindex())]"

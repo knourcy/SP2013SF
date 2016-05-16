@@ -47,7 +47,7 @@
   },
   "resources": [
     {
-      "apiVersion": "2015-06-15",
+      "apiVersion": "2015-05-01",
       "type": "Microsoft.Compute/virtualMachines",
       "name": "[parameters('adPDCVMName')]",
       "location": "[resourceGroup().location]",
@@ -109,7 +109,7 @@
         {
           "type": "Microsoft.Compute/virtualMachines/extensions",
           "name": "[concat(parameters('adPDCVMName'),'/InstallDomainController')]",
-          "apiVersion": "2015-06-15",
+          "apiVersion": "2015-05-01",
           "location": "[resourceGroup().location]",
           "dependsOn": [
             "[resourceId('Microsoft.Compute/virtualMachines', parameters('adPDCVMName'))]"
